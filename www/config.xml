@@ -3,7 +3,7 @@
         xmlns:gap   = "http://phonegap.com/ns/1.0"
         id          = "com.smggaming.guerin.yatzy"
         versionCode = "7"
-        version     = "1.0.0" >
+        version     = "1.0.1" >
 
     <name>Yatzy</name>
 
@@ -11,7 +11,7 @@
         Yatzy, social multiplayer game.
     </description>
 
-    <author href="http://ianguer.in" email="img236@nyu.edu">
+    <author href="http://github.com/ianguerin" email="img236@nyu.edu">
         Ian Guerin
     </author>
 
@@ -49,5 +49,10 @@
         Otherwise, you can specify specific domains:
     -->
     <access origin="*"/>
+
+    <gap:plugin name="com.phonegap.plugins.facebookconnect" version="0.9.0">
+        <param name="APP_ID" value="780918375297002" />
+        <param name="APP_NAME" value="Yatzy" />
+    </gap:plugin>
 
 </widget>
