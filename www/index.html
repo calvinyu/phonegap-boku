@@ -31,12 +31,13 @@
     }
 
     function onDeviceReady() {
-
-    // facebookConnectPlugin.login(["public_profile"],
-    //   fbLoginSuccess,
-    //   function (error) { sendToken("", error); }
-    // );
-
+      facebookConnectPlugin.login(["public_profile"],
+        fbLoginSuccess,
+        function (error) { sendToken("", error); }
+      );
+    }
+    
+    function registerForPushNotification() {
       // alert("device is ready");
       var pushNotification = window.plugins.pushNotification;
       alert(cordova.platformId);
