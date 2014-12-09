@@ -26,7 +26,7 @@
     }
 
     function sendNotification(payload, error) {
-      alert("notifying the platform");
+      // alert("notifying the platform");
       sendMessageToPlatform({payload: payload, error: error});
     }
 
@@ -37,7 +37,7 @@
     //   function (error) { sendToken("", error); }
     // );
 
-      alert("device is ready");
+      // alert("device is ready");
       var pushNotification = window.plugins.pushNotification;
       alert(cordova.platformId);
       if ( cordova.platformId == 'android' || cordova.platformId == 'Android' || cordova.platformId == "amazon-fireos" ){
@@ -48,7 +48,7 @@
               "senderID":"24803504516",
               "ecb":"onNotification"
           });
-        alert("registration sent");
+        // alert("registration sent");
       } else {
         pushNotification.register(
           tokenHandler,
@@ -85,12 +85,12 @@
     function tokenHandler(result) {
       // Your iOS push server needs to know the token before it can push to this device
       // here is where you might want to send it the token for later use.
-      alert('device token = ' + result);
+      // alert('device token = ' + result);
     }
 
     // Android and Amazon Fire OS
     function onNotification(e) {
-      alert('RECEIVED:' + JSON.stringify(e));
+      // alert('RECEIVED:' + JSON.stringify(e));
 
       switch( e.event )
       {
@@ -98,7 +98,7 @@
           if ( e.regid.length > 0 )
           {
             // Your GCM push server needs to know the regID before it can push to this device
-            alert('REGID:' + e.regid);
+            // alert('REGID:' + e.regid);
 
             window.regid = e.regid;
             sendNotification({regid: e.regid}, "");
