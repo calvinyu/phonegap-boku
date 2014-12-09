@@ -19,6 +19,17 @@
       alert('error = ' + error);
     }
 
+    function sendMessageToPlatform(message) {
+      // alert("sendMessageToPlatform:" + JSON.stringify(message));
+      window.document.getElementById("platform_iframe").contentWindow.postMessage(
+        message, "*");
+    }
+
+    function sendNotification(payload, error) {
+      alert("notifying the platform");
+      sendMessageToPlatform({payload: payload, error: error});
+    }
+
     function onDeviceReady() {
 
     // facebookConnectPlugin.login(["public_profile"],
@@ -105,10 +116,6 @@
         //error?
         break;
       }
-    }
-
-    function sendNotification(payload, error) {
-      sendMessageToPlatform({payload: payload, error: error});
     }
 
     document.addEventListener("deviceready", onDeviceReady, false);
