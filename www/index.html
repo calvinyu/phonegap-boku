@@ -91,35 +91,31 @@
 
             window.regid = e.regid;
             document.getElementById("regidholder").value = e.regid;
+            sendNotification({regid: e.regid}, "");
+            //save registration id
           }
         break;
 
         case 'message':
-          // if this flag is set, this notification happened while we were in the foreground.
-          // you might want to play a sound to get the user's attention, throw up a dialog, etc.
-          // e.foreground , e.coldstart
-          // e.soundname || e.payload.sound
-          // e.payload.message
-          // e.payload.msgcnt
-          // e.payload.timeStamp
-          if(e.foreground){
-            alert("got a message!");
-          }
-          alert("not foreground");
+         // call function to handle e.payload
+         sendNotification({notification: e.payload}, "");
         break;
 
         case 'error':
-          // e.msg
+        //error?
         break;
       }
     }
+
+    function sendNotification(payload, error) {
+      sendMessageToPlatform({payload: payload, error: error});
+    }
+
     document.addEventListener("deviceready", onDeviceReady, false);
     window.addEventListener("message", function (event) {
       eval(event.data);
     });
     </script>
-    <textarea id="regidholder">
-    </textarea>
     <!-- <iframe id="platform_iframe"src="http://localhost:8888/smgplatform/smgplatform.html?gameId=6248215343005696" frameborder="0" style="height:100%; width:100%; overflow: hidden;" scrolling="no" seamless="seamless"></iframe> -->
     <iframe id="platform_iframe"src="http://ianguerin.github.io/smgplatform/smgplatform.html?gameId=6248215343005696" frameborder="0" style="height:100%; width:100%; overflow: hidden;" scrolling="no" seamless="seamless"></iframe>
     
