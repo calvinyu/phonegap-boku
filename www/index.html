@@ -13,10 +13,10 @@
     <script type="text/javascript" src="PushNotification.js"></script>
     <script>
     function successHandler (result) {
-      alert('result = ' + result);
+      // alert('result = ' + result);
     }
     function errorHandler (error) {
-      alert('error = ' + error);
+      // alert('error = ' + error);
     }
 
     function sendMessageToPlatform(message) {
@@ -54,7 +54,7 @@
     function registerForPushNotification() {
       // alert("device is ready");
       var pushNotification = window.plugins.pushNotification;
-      alert(cordova.platformId);
+      // alert(cordova.platformId);
       if ( cordova.platformId == 'android' || cordova.platformId == 'Android' || cordova.platformId == "amazon-fireos" ){
         pushNotification.register(
           successHandler,
@@ -79,7 +79,7 @@
 
     // iOS
     function onNotificationAPN(event) {
-      alert('RECEIVED:' + JSON.stringify(event));
+      // alert('RECEIVED:' + JSON.stringify(event));
       if ( event.alert )
       {
           navigator.notification.alert(event.alert);
