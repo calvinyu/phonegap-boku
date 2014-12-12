@@ -2,10 +2,10 @@
 <widget xmlns   = "http://www.w3.org/ns/widgets"
         xmlns:gap   = "http://phonegap.com/ns/1.0"
         id          = "com.guerin.yatzy"
-        versionCode = "30"
-        version     = "0.3.0" >
+        versionCode = "33"
+        version     = "0.3.3" >
 
-    <name>YatzyTest</name>
+    <name>Yatzy</name>
 
     <description>
         Yatzy, social multiplayer game.
