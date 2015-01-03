@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <widget xmlns   = "http://www.w3.org/ns/widgets"
         xmlns:gap   = "http://phonegap.com/ns/1.0"
-        id          = "com.guerin.yatzy"
+        id          = "com.calvinyu.boku"
         versionCode = "33"
         version     = "0.3.3" >
 
-    <name>Yatzy</name>
+    <name>Boku</name>
 
     <description>
-        Yatzy, social multiplayer game.
+        Boku, social multiplayer game.
     </description>
 
-    <author href="http://github.com/ianguerin" email="img236@nyu.edu">
-        Ian Guerin
+    <author href="http://github.com/calvinyu" email="calvinyu@nyu.edu">
+        Yuchih Yu
     </author>
 
     <!--
@@ -51,8 +51,8 @@
     <access origin="*"/>
 
     <gap:plugin name="com.phonegap.plugins.facebookconnect" version="0.9.0">
-        <param name="APP_ID" value="780918375297002" />
-        <param name="APP_NAME" value="Yatzy" />
+        <param name="APP_ID" value="890142724349656" />
+        <param name="APP_NAME" value="Boku" />
     </gap:plugin>
     <gap:plugin name="com.phonegap.plugins.pushplugin" version="2.4.0" />
 
