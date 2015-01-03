@@ -1,1 +1,1 @@
-Yatzy as a Phonegap Android APK
+Boku as a Phonegap Android APK
